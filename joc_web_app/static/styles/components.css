@@ -1,0 +1,456 @@
+.submit {
+    padding: 12px;
+    border-radius: 22px;
+    background-color: rgb(12, 110, 195);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.submit:disabled {
+    background-color: rgb(169, 169, 169);
+    cursor: not-allowed;
+}
+
+.submit:disabled:hover {
+    background-color: rgb(145, 145, 145);
+}
+
+.submit:hover {
+    background-color: rgb(17, 137, 243);
+}
+
+.button-filled {
+    padding: 12px;
+    border-radius: 22px;
+    background-color: rgb(12, 110, 195);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.button-filled:disabled {
+    background-color: rgb(169, 169, 169);
+    cursor: not-allowed;
+}
+
+.button-filled:disabled:hover {
+    background-color: rgb(145, 145, 145);
+}
+
+.button-filled:hover {
+    background-color: rgb(17, 137, 243);
+}
+
+.button-outlined {
+    padding: 12px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(12, 110, 195);
+    color: rgb(12, 110, 195);
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+
+
+.button-outlined:hover {
+    background-color: #dddddd;
+}
+
+.textbox {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    float: left;
+}
+
+.link1 {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(12, 110, 195);
+}
+
+.link:hover {
+    color: rgb(56, 147, 228);
+}
+
+.list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.searchbox {
+    max-width: 500px !important;
+    width: 500px;
+    height: 35px;
+    border-radius: 25px;
+    border: 0;
+    overflow: hidden;
+    outline: 1px solid #ddd;
+    float: left;
+}
+
+.button-x {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    float: left;
+    transition: background-color .2s ease-in;
+}
+
+.button-x:hover {
+    background-color: #ddd;
+}
+
+.right3{
+    width: 50%;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+}
+
+.left3 {
+    width: 50%;
+}
+
+.menu_strip {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    float: left;
+    transition: background-color .01s ease-in;
+}
+
+.clk {
+    cursor: pointer;
+}
+
+.clk:hover {
+    background-color: #eeecec;
+}
+
+.focused {
+    border-right: 5px solid rgb(56, 147, 228);
+    background-color: rgba(56, 148, 228, 0.129);
+}
+
+.break {
+    width: 100%;
+    height: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f5f3f3;
+    display: flex;
+    align-items: center;
+    position: sticky;
+} 
+
+.strip-2 {
+    width: 100%;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strip-6 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strip-3 {
+    width: 100%;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.card-1 {
+    width: 350px;
+    min-width: 300px !important;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+    height: 130px;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-2 {
+    width: 550px;
+    min-width: 300px !important;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    display: flex;
+}
+
+.green-card {
+    background-color: #afde97;
+    border: 1px solid rgb(126, 173, 126);
+}
+
+.blue-card {
+    background-color: #97d2de;
+    border: 1px solid rgb(126, 163, 173);
+}
+
+.red-card {
+    background-color: #dea897;
+    border: 1px solid rgb(173, 126, 126);
+}
+
+.strip-4 {
+    max-width: 100% !important;
+    width: fit-content !important;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.strip-5 {
+    max-width: 100% !important;
+    width: fit-content !important;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card-right {
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 22px;
+    flex: 1;
+}
+
+.card-right-2 {
+    width: 30%;
+    height: 100%;
+    float: left;
+    flex: 2;
+}
+
+.card-full-2 {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-left {
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 21px;
+    flex: 4;
+    overflow: hidden;
+}
+
+.card-left-2 {
+    width: 100%;
+    float: left;
+    padding: 21px;
+    flex: 4;
+    overflow: hidden;
+}
+
+.blue-card-right-color {
+    background-color: #265c67;
+}
+
+.green-card-right-color {
+    background-color: #425d33;
+}
+
+.red-card-right-color {
+    background-color: #63443b;
+}
+
+.white-card {
+    background-color: #ffffff;
+
+}
+
+.btn-collect-1 {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.card-top {
+    width: 100%;
+    float: left;
+    /* height: 10px; */
+}
+
+.card-bottom {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.card-full-2 {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.table {
+    border-radius: 10px;
+    width: 100%;
+    float: left;
+}
+
+.thead {
+    width: 100%;
+    padding: 5px;
+    float: left;
+    padding-bottom: 0;
+}
+
+.tbody {
+    width: 100%;
+    padding: 5px;
+    float: left;
+    padding-top: 0;
+}
+
+.tr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+    border-bottom: 1px solid#000000;
+}
+
+.col-2 {
+    flex: 1;
+    border-bottom: 1px solid#282828;
+    padding: 10px;
+    border-right: 1px solid #3e3e3e;
+}
+
+.col-3 {
+    flex: 1;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 10px;
+    border-right: 1px solid #e6e5e5;
+}
+
+
+
+.pack-1 {
+    height: 100%;
+    display: block;
+    float: left;
+    flex: 1;
+}
+
+.break-3 {
+    width: 100%;
+    height: 10px;
+    float: left;
+}
+
+.grp {
+    width: 100%;
+    float: left;
+}
+
+.card-3 {
+    width: 100%;
+    min-width: 300px !important;
+    border-radius: 10px;
+    float: left;
+    margin: 8px;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    /* display: flex; */
+}
+
+.dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0000003e;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0000003e;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.boxDialog {
+    width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.pack-2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mini-2 {
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="504.98126"
+   height="503.62103"
+   viewBox="0 0 504.98126 503.62103"
+   version="1.1"
+   id="SVGRoot"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16178" />
+  <g
+     id="layer1"
+     transform="translate(2.4906545,1.8105109)">
+    <rect
+       style="fill:#ff8080;stroke-width:0;stroke-miterlimit:0;paint-order:markers stroke fill"
+       id="rect16417"
+       width="407.01874"
+       height="407.01874"
+       x="46.490631"
+       y="46.490631" />
+    <rect
+       style="fill:#ffccaa;stroke-width:0;stroke-miterlimit:0;paint-order:markers stroke fill"
+       id="rect16417-0"
+       width="407.01874"
+       height="407.01874"
+       x="-26.732674"
+       y="102.67685"
+       transform="rotate(-15)" />
+    <rect
+       style="fill:#ffe680;stroke-width:0;stroke-miterlimit:0;paint-order:markers stroke fill"
+       id="rect16417-0-2"
+       width="407.01874"
+       height="407.01874"
+       x="-509.69559"
+       y="-26.732674"
+       transform="matrix(-0.96592583,-0.25881905,-0.25881905,0.96592583,0,0)" />
+    <rect
+       style="fill:#cdde87;stroke-width:0;stroke-miterlimit:0;paint-order:markers stroke fill"
+       id="rect16417-0-2-9"
+       width="351.7948"
+       height="361.7771"
+       x="-133.81284"
+       y="-531.24902"
+       transform="matrix(-0.6051391,0.79611976,-0.78623893,-0.6179226,0,0)" />
+    <rect
+       style="fill:#00ccff;stroke-width:0;stroke-miterlimit:0;paint-order:markers stroke fill"
+       id="rect16417-0-2-9-9"
+       width="351.7948"
+       height="361.7771"
+       x="174.1181"
+       y="-225.44418"
+       transform="matrix(0.61237111,0.79057044,-0.80036101,0.59951835,0,0)" />
+  </g>
+</svg>

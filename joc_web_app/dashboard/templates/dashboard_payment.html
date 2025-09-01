@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | JustOneClick</title>
+    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <meta name="dicoding:email" content="nararya.dh.outl@gmail.com">
+    <link rel="icon" href="assets/logo/icon.webp">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="preloader">
+        <img src="assets/icon/preloader.svg" alt="" srcset="" class="preloader-animation">
+    </div>
+    <div class="dialog" >
+        <div class="back-2" onclick="closeDialog()"></div>
+        <div class="boxDialog" id="AddPaymentMethodDialog">
+            <div class="strip-6">
+                <span class="strong-3">Add Payment Methods</span>
+                <div class="btn-collect-1">
+                    <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/close.svg');" onclick="closeDialog()"></div>
+                </div>
+            </div>
+            <div class="pack-2" style="margin-top: 10px;">
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px);">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="Card Number" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                            <td style="width: max-content; float: left; height: 30px; display: flex; align-items: center; margin-right: 20px;">
+                                <img src="assets/icon/logo_visa.svg" class="mini-2">
+                                <img src="assets/icon/logo_mastercard.png" class="mini-2">
+                                <img src="assets/icon/logo_gpn.png" class="mini-2">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <table style="border: 0; width: 100%;">
+                <tr>
+                    <td>
+                         <div class="textbox" style="border-radius: 7px;">
+                            <table style="border: 0; width: 100%;">
+                                <tr>
+                                    <td style="width: 20px;"></td>
+                                    <td style="width: calc(100% - 40px);height: 100%;"><input type="text" placeholder="CVV" class="input-3" name="Email" style="font-size: 16px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="textbox" style="border-radius: 7px;">
+                            <table style="border: 0; width: 100%;">
+                                <tr>
+                                    <td style="width: 20px;"></td>
+                                    <td style="width: calc(100% - 40px);height: 100%;"><input type="text" placeholder="Exp. Date" class="input-3" name="Email" style="font-size: 16px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="strip-6" style="margin-top: 20px;">
+                <div></div>
+                <div class="btn-collect-1">
+                    <button type="button" class="button-outlined" style="width: max-content;" onclick="closeDialog()">Cancel</button>
+                    <div class="break-2"></div>
+                    <button type="button" class="button-filled" style="width: max-content;">Verify</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="boxDialog" id="EditPaymentData">
+            <div class="strip-6">
+                <span class="strong-3">Edit Your Payment Data</span>
+                <div class="btn-collect-1">
+                    <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/close.svg');" onclick="closeDialog()"></div>
+                </div>
+            </div>
+            <div class="pack-2" style="margin-top: 10px;">
+                
+                <table style="border: 0; width: 100%;">
+                <tr>
+                    <td>
+                         <div class="textbox" style="border-radius: 7px;">
+                            <table style="border: 0; width: 100%;">
+                                <tr>
+                                    <td style="width: 20px;"></td>
+                                    <td style="width: calc(100% - 40px);height: 100%;"><input type="text" placeholder="First Name" class="input-3" name="Email" style="font-size: 16px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="textbox" style="border-radius: 7px;">
+                            <table style="border: 0; width: 100%;">
+                                <tr>
+                                    <td style="width: 20px;"></td>
+                                    <td style="width: calc(100% - 40px);height: 100%;"><input type="text" placeholder="Last Name" class="input-3" name="Email" style="font-size: 16px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                </table>
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px);">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="Secondary Email Address" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px); margin-top: 3px;">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="Phone Number" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px); margin-top: 3px;">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="Home Address 1" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px); margin-top: 3px;">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="Home Address 2" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="textbox" style="border-radius: 7px; width: calc(100% - 4px); margin-top: 3px;">
+                    <table style="border: 0; width: 100%;">
+                        <tr>
+                            <td style="width: 20px; float: left;"></td>
+                            <td style="width: 100%;height: 100%;"><input type="text" placeholder="ZIP/Postal Code" class="input-3"  name="Email" style="font-size: 16px;"></td>
+                        </tr>
+                    </table>
+                </div>
+            <div class="strip-6" style="margin-top: 20px;">
+                <div></div>
+                <div class="btn-collect-1">
+                    <button type="button" class="button-outlined" style="width: max-content;" onclick="closeDialog()">Cancel</button>
+                    <div class="break-2"></div>
+                    <button type="button" class="button-filled" style="width: max-content;">Verify</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="header3 flex-space-center">
+            <div class="left3"></div>
+            <div class="right3">
+                <span class="normal" style="color: #fff; float: left; width: fit-content !important; font-size: 14px;"><img src="assets/icon/payment.svg" alt="" srcset="" class="icon_3">&nbsp;Payments(<strong>0</strong>)</span>
+                <span class="margin-left"></span>
+                <span class="normal margin-left" style="color: #fff; float: left; width: fit-content !important; font-size: 14px;"><img src="assets/icon/currency.svg" alt="" srcset="" class="icon_3">&nbsp;Currency(<strong>IDR</strong>)</span>
+            </div>
+        </div>
+        <div class="header2 flex-space-center">
+            <div class="cont-left">
+                <div class="button-x back-icon" style="background-image: url('assets/icon/menu.svg'); float: left;">
+                </div>
+                <div class="image-logo-text-2 margin-left">
+
+                </div>
+            </div>
+            <div class="cont-right">
+                <div class="searchbox" id="searchbox">
+                    <div class="icon flex-center-center">
+                        <img src="assets/icon/search.svg" alt="" srcset="" class="icon_2" id="icon_search">
+                    </div>
+                    <div class="flex--center" style="width: calc(100% - 41px);">
+                        <input type="text" class="input-2" id="search" autocomplete="off" placeholder="Search anything you want...">
+                    </div>
+                </div>
+                <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/chatbot.svg');">
+                </div>
+                <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/settings.svg');">
+                </div>
+                <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/notifications.svg');">
+                </div>
+                <div class="button-x margin-left back-icon" style="background-image: url('assets/icon/account.svg');">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body2">
+        <div class="left2">
+            <div class="break">
+                <div>
+                    <span class="strong-2">JustOneClick Console</span>
+                </div>
+            </div>
+            <span class="strong-2 menu_strip margin-top">Basic Option</span>
+            <div class="menu_strip clk">
+                Home
+            </div>
+            <div class="menu_strip clk focused">
+                Payments Method
+            </div>
+            <div class="menu_strip clk">
+                Products Manager
+            </div>
+            <hr class="margin-top" style="border: 0.5px solid #ddd; float: left; width: 100%;">
+            <span class="strong-2 menu_strip margin-top">Reports</span>
+            <div class=" menu_strip clk">
+                Income Report
+            </div>
+            <div class="menu_strip clk">
+                Outcome Report
+            </div>
+            <div class="menu_strip clk">
+                Budgets & Saving Plan
+            </div>
+            <hr class="margin-top" style="border: 0.5px solid #ddd; float: left; width: 100%;">
+            <span class="strong-2 menu_strip margin-top">Debts & Loans</span>
+            <div class="menu_strip clk">
+                List of Loans
+            </div>
+            <div class="menu_strip clk">
+                Loans Report
+            </div>
+            <hr class="margin-top" style="border: 0.5px solid #ddd; float: left; width: 100%;">
+            <span class="strong-2 menu_strip margin-top">Calculators & Cashier</span>
+            <div class="menu_strip">
+                Products Calculator
+            </div>
+            <div class="menu_strip clk">
+                Smart Counter Calculator
+            </div>
+            <div class="menu_strip clk">
+                Calculation History
+            </div>
+            <div class="menu_strip margin-bottom clk">
+                Transaction History
+            </div>
+        </div>
+        <div class="right2">
+            <div class="strip-2">
+                <span class="strong-3">Payment Methods</span>
+                <div class="btn-collect-1">
+                    <button type="button" class="button-outlined" style="width: max-content;">Download .csv</button>
+                    <div class="break-2"></div>
+                    <button type="button" class="button-filled" style="width: max-content;" onclick="AddPaymentMethodDialog_open()">Add Payments Method</button>
+                </div>
+            </div>
+            <div class="strip-3">
+                <div class="card-3 white-card" style="margin-top: 0;">
+                    <div class="strip-2" style="margin: 0; padding: 0; margin-left: 10px; margin-right: 10px; float: left; box-sizing: border-box; width: calc(100% - 40px);">
+                        <span class="strong-3" style="font-size: 19px;">User's Payment Data</span>
+                        <div class="btn-collect-1">
+                            <button type="button" class="button-outlined" style="width: max-content;" onclick="EditPaymentData_open()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="card-full-2">
+                        <div class="pack-1">
+                            <div class="grp">
+                                <span class="strong-6">Default Payment</span>
+                                <span class="strong-6" style="font-weight: normal;">-</span>
+                            </div>
+                            <div class="break-3"></div>
+                            <div class="grp">
+                                <span class="strong-6">Person's Name</span>
+                                <span class="strong-6" style="font-weight: normal;">-</span>
+                            </div>
+                         </div>
+                         <div class="pack-1">
+                            <div class="grp">
+                                <span class="strong-6">Person's Phone Number</span>
+                                <span class="strong-6" style="font-weight: normal;">-</span>
+                            </div>
+                            <div class="break-3"></div>
+                            <div class="grp">
+                                <span class="strong-6">Person's Secondary Email Address</span>
+                                <span class="strong-6" style="font-weight: normal;">-</span>
+                            </div>
+                         </div>
+                         <div class="pack-1">
+                            <div class="grp">
+                                <span class="strong-6">Home Address</span>
+                                <span class="strong-6" style="font-weight: normal;">-</span>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="strip-3">
+                <div class="table">
+                    <div class="thead">
+                        <div class="tr">
+                            <div class="col-2" style="flex: 2;">
+                                Payment Card Number
+                            </div>
+                            <div class="col-2">
+                                Payment Method
+                            </div>
+                            <div class="col-2">
+                                Expiration Date
+                            </div>
+                            <div class="col-2" style="border-right: 0;">
+                                Payments Total
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <div class="col-3" style="flex: 2;">
+                                **** **** **** 0000
+                            </div>
+                            <div class="col-3">
+                                VISA
+                            </div>
+                            <div class="col-3">
+                                00-00-00
+                            </div>
+                            <div class="col-3" style="border-right: 0;">
+                                3
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="col-3" style="flex: 2;">
+                                **** **** **** 0000
+                            </div>
+                            <div class="col-3">
+                                Mastercard
+                            </div>
+                            <div class="col-3">
+                                00-00-00
+                            </div>
+                            <div class="col-3" style="border-right: 0;">
+                                4
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer flex--center">
+
+    </div>
+    <script src="scripts/dynamic4.js"></script>
+    <script src="scripts/dynamic6.js"></script>
+</body>
+</html>

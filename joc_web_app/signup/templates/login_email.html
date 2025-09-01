@@ -1,0 +1,81 @@
+{% load static %}
+
+<!-- 
+Login App 
+State: Users enter email, sign up, or click "forgot password" link
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- dicoding user -->
+    <meta name="dicoding:email" content="nararya.dh.outl@gmail.com">
+    <title>Enter Email | Login | JustOneClick</title>
+    <!-- import font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- import styles -->
+    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <!-- import HCaptcha api.js -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <!-- apply the website logo -->
+    <link rel="icon" href="assets/logo/icon.webp">
+</head>
+<body>
+    <!-- preloader page: add loading page while waiting all of components loaded properly -->
+    <div class="preloader">
+        <img src="assets/icon/preloader.svg" alt="" srcset="" class="preloader-animation">
+    </div>
+    <!-- logo: located in the edge of website -->
+    <div class="header flex--center">
+        <div class="image-logo-text">
+        </div>
+    </div>
+    <!-- main body -->
+    <div class="body flex-center-center">
+        <!-- Box/dialog appear in the middle of page -->
+        <div class="box1 flex-left-right">
+            <!-- Leftside the box -->
+            <div class="left1">
+                <div class="text margin-top">
+                    <span class="strong">Login</span>
+                    <span class="normal">Use your account and pass the CAPTCHA.</span>
+                </div>
+                <div class="margin-top float-left form1">
+                    <form method="post">
+                        <div class="textbox">
+                            <table style="border: 0; width: 100%;">
+                                <tr>
+                                    <td style="width: 20px;"></td>
+                                    <td style="width: 20px;height: 30px;" class="flex-center-center"><img src="assets/icon/email.svg" class="icon" style=" box-sizing: border-box;"></td>
+                                    <td style="width: calc(100% - 40px);height: 100%;"><input type="text" placeholder="Email" class="input-1" name="Email"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="strip margin-top">
+                            <div class="h-captcha" data-sitekey="51c2d4fe-f05c-4d30-89fc-21b6c514333e" style="float: right;"></div>
+                        </div>
+                        <div class="strip margin-top">
+                            <button type="submit" class="submit">Continue</button>
+                        </div>
+                    </form>
+                    <div class="text margin-top">
+                    <span class="normal right">Didn't have an account? <a href="" class="link1">Sign Up</a></span>
+                </div>
+                </div>
+            </div>
+
+            <!-- rightside the box -->
+            <div class="right1">
+                <div class="random-photo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/dynamic1.js"></script>
+</body>
+</html>

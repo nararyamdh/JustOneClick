@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="dicoding:email" content="nararya.dh.outl@gmail.com">
+    <title>Verification | JustOneClick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <div class="header flex--center">
+        <div class="image-logo-text">
+        </div>
+    </div>
+    <!-- body -->
+    <div class="body flex-center-center">
+        <!-- Box/dialog appear in the middle of page -->
+        <div class="box1 flex-left-right">
+            <!-- Leftside the box -->
+            <div class="left1">
+                <div class="text margin-top">
+                    <span class="strong">Let's create a password</span>
+                    <span class="normal">The password must met the policy.</span>
+                    <span class="normal list"><img src="assets/icon/question_mark.svg" class="icon_q" id="icon_1">&nbsp;Minimum 8 characters.</span>
+                    <span class="normal list"><img src="assets/icon/question_mark.svg" class="icon_q" id="icon_2">&nbsp;Minimum one capital and small letter.</span>
+                    <span class="normal list"><img src="assets/icon/question_mark.svg" class="icon_q" id="icon_3">&nbsp;Minimum one digit of number.</span>
+                    <span class="normal list"><img src="assets/icon/question_mark.svg" class="icon_q" id="icon_4">&nbsp;Minimum one unique symbol except (", ', \, /, =, <, >).</span>
+                </div>
+                <div class="margin-top float-left form1">
+                    <form method="post">
+                        <div class="textbox">
+                                 <table style="border: 0; width: 100%;">
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td style="width: calc(100% - 40px);height: 100%;"><input type="password" placeholder="Password" class="input-1" name="pass" id="pass"></td>
+                                    </tr>
+                                </table>
+                             </div>
+                        <div class="textbox margin-top">
+                                 <table style="border: 0; width: 100%;">
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td style="width: calc(100% - 40px);height: 100%;"><input type="password" placeholder="Confirm Password" class="input-1" name="Email" id="confirm_pass"></td>
+                                    </tr>
+                                </table>
+                             </div>
+                        <div class="strip margin-top">
+                            <button type="submit" class="submit">Finish</button>
+                        </div>
+                    </form>
+                    <div class="text margin-top">
+                </div>
+                </div>
+            </div>
+
+            <!-- rightside the box -->
+            <div class="right1">
+                <div class="random-photo" style="height: 100% !important;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/dynamic3.js"></script>
+    <script src="scripts/checkPass.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="dicoding:email" content="nararya.dh.outl@gmail.com">
+    <title>Verification | JustOneClick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <div class="header flex--center">
+        <div class="image-logo-text">
+        </div>
+    </div>
+    <!-- body -->
+    <div class="body flex-center-center">
+        <!-- Box/dialog appear in the middle of page -->
+        <div class="box1 flex-left-right">
+            <!-- Leftside the box -->
+            <div class="left1">
+                <div class="text margin-top">
+                    <span class="strong">You're all set!</span>
+                    <span class="normal">Now, you can login with account that registered before.</span>
+                </div>
+                <div class="flex-center-center" style="width: 100%; height: fit-content; float: left;">
+                    <img src="assets/vector/success.svg" alt="" class="margin-top" style="width: 230px; height: 230px;">
+                </div>
+                <div class="strip margin-top" style="padding-right: 20px;">
+                    <button type="submit" class="button-outlined">Login now</button>
+                </div>
+            </div>
+
+            <!-- rightside the box -->
+            <div class="right1">
+                <div class="random-photo" style="height: 100% !important;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/dynamic3.js"></script>
+    <script src="scripts/checkPass.js"></script>
+</body>
+</html>
