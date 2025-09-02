@@ -10,7 +10,7 @@ cipher = Fernet(os.getenv("ENCRYPTION_KEY").encode())
 
 class Payment_Method(models.Model):
     id_x = models.AutoField(primary_key=True,unique=True)
-    owner = models.CharField(max_length=255,unique=True)
+    owner_email = models.CharField(max_length=255,unique=True)
 
     postal_code = models.IntegerField()
     address = models.CharField(max_length=255,unique=True)
@@ -19,6 +19,13 @@ class Payment_Method(models.Model):
 
     exp_month = models.IntegerField()
     exp_year = models.IntegerField()
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.email = cipher.encrypt(email.encode())
+            return self.email
+        else:
+            return cipher.decrypt(self.email).decode()
     
     def dne_address(self, address, mode):
         if mode == 'e':
@@ -57,19 +64,141 @@ class Payment_Method(models.Model):
 
 class Products_List(models.Model):
     id_x = models.AutoField(primary_key=True,unique=True)
+    owner_email = models.CharField(max_length=255,unique=True)
 
     products = models.CharField(max_length=255,unique=True)
-    owner = models.CharField(max_length=255,unique=True)
 
     sell_counter = models.IntegerField(default=0)
 
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
 class Income_List(models.Model):
     id_x = models.IntegerField(primary_key=True,unique=True)
+    owner_email = models.CharField(max_length=255,unique=True)
     
     amount = models.CharField(max_length=255,unique=True)
     currency = models.CharField(max_length=255,unique=True)
-    owner = models.CharField(max_length=255,unique=True)
+    from_x = models.CharField(max_length=255,unique=True, default="-")
 
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class Outcome_List(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+    
+    amount = models.CharField(max_length=255,unique=True)
+    currency = models.CharField(max_length=255,unique=True)
+    to_x = models.CharField(max_length=255,unique=True, default="-")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class Loan_List(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+    
+    amount = models.CharField(max_length=255,unique=True)
+    currency = models.CharField(max_length=255,unique=True)
+    to_x = models.CharField(max_length=255,unique=True, default="-")
+
+    due_date = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class ExpenditureByMonth(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+
+    day = models.IntegerField()
+    month = models.IntegerField()
+    year = models.IntegerField()
+    
+    amount = models.CharField(max_length=255,unique=True)
+    currency = models.CharField(max_length=255,unique=True)
+
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class IncomeByMonth(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+
+    day = models.IntegerField()
+    month = models.IntegerField()
+    year = models.IntegerField()
+    
+    amount = models.CharField(max_length=255,unique=True)
+    currency = models.CharField(max_length=255,unique=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class LoanByMonth(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+
+    day = models.IntegerField()
+    month = models.IntegerField()
+    year = models.IntegerField()
+    
+    amount = models.CharField(max_length=255,unique=True)
+    currency = models.CharField(max_length=255,unique=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
+
+class PaymentByMonth(models.Model):
+    id_x = models.IntegerField(primary_key=True,unique=True)
+    owner = models.CharField(max_length=255,unique=True)
+
+    day = models.IntegerField()
+    month = models.IntegerField()
+    year = models.IntegerField()
+    
+    counter = models.CharField(max_length=255,unique=True)
+
+    def input_email(self, email, mode):
+        if mode == 'e':
+            self.owner_email = cipher.encrypt(email.encode())
+            return self.owner_email
+        else:
+            return cipher.decrypt(self.owner_email).decode()
